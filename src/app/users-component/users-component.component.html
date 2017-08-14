@@ -1,0 +1,43 @@
+<div class="container">
+
+  <h1>Add User</h1>
+<form (ngSubmit)="onSave()" #f="ngForm">
+  <div class="input-container">
+    <label>Name</label>
+    <input class="form-control"
+           ngModel
+           name="name">
+  </div>
+  <div class="input-container">
+    <label>Age</label>
+    <input class="form-control"
+           ngModel
+           name="age">
+  </div>
+  <div class="input-container">
+    <label>Email</label>
+    <input class="form-control"
+           type="email"
+           ngModel
+           name="email">
+  </div>
+  <div class="input-container">
+    <label>Location</label>
+    <input class="form-control"
+           ngModel
+           name="location">
+  </div>
+
+  <button class="btn btn-info" type="submit">Add User</button>
+</form>
+<hr>
+
+
+
+  <br>
+  <hr>
+  <h1>User List</h1>
+  <p>Click the button to show any new users.</p>
+
+  <button class="btn btn-primary" (click)="showUsers()">Show Users</button>
+</div>

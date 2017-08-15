@@ -6,10 +6,10 @@ import {UsersService} from "./users.service";
 
 @Component({
   selector: 'app-users-component',
-  templateUrl: './users-component.component.html',
-  styleUrls: ['./users-component.component.scss']
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class UsersComponentComponent implements OnInit {
+export class UsersComponent implements OnInit {
   @ViewChild('f') userForm: NgForm;
  public users: any[];
 

@@ -6,8 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
-import { UsersComponentComponent } from './users-component/users-component.component';
-import {UsersService} from "./users-component/users.service";
+import { UsersComponent } from './users/users.component';
+import {UsersService} from "./users/users.service";
 
 export const firebaseConfig =  {
     apiKey: "AIzaSyA4IYWhVwblEMaW6CMdhwAZqK7NT4_zPRs",
@@ -21,7 +21,7 @@ export const firebaseConfig =  {
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponentComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule,

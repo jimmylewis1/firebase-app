@@ -1,16 +1,16 @@
 <div class="container">
-
-  <h1>Add User</h1>
+<h1>Add User</h1>
 <form (ngSubmit)="onSave()" #f="ngForm">
   <div class="input-container">
     <label>Name</label>
     <input class="form-control"
            ngModel
-           name="name">
+           name="username">
   </div>
   <div class="input-container">
     <label>Age</label>
     <input class="form-control"
+           type="number"
            ngModel
            name="age">
   </div>
@@ -27,12 +27,9 @@
            ngModel
            name="location">
   </div>
-
   <button class="btn btn-info" type="submit">Add User</button>
 </form>
 <hr>
-
-
 
   <br>
   <hr>

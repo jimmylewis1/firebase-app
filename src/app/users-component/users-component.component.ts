@@ -11,8 +11,10 @@ import {UsersService} from "./users.service";
 })
 export class UsersComponentComponent implements OnInit {
   @ViewChild('f') userForm: NgForm;
+ public users: any[];
 
   constructor(private userService: UsersService) { }
+
 
   // onSave() {
   //   this.serverService.storeServers(this.servers)
@@ -27,14 +29,22 @@ export class UsersComponentComponent implements OnInit {
             (response: Response) => {
               const data = response.json();
               console.log(data);
+              this.users = data;
             },
             (error) => console.log(error)
         );
 
   }
-  onSave(form: NgForm) {
-    console.log(this.userForm);
-    this.userService.saveUser();
+  onSave() {
+    console.log(this.userForm.value);
+    this.userService.saveUser(this.userForm.value)
+        .subscribe(
+            (response: Response) => {
+                const data = response.json();
+                console.log(data);
+            },
+            (error) => console.log(error)
+        );
   }
 
 }

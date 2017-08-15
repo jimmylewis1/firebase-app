@@ -7,14 +7,13 @@ export class UsersService {
     // storeServers(servers: any[]) {
     //    return this.http.post('https://test-project-ng4.firebaseio.com/users.json', servers);
     // }
-    users: any[];
 
     getUsers() {
         return this.http.get('https://test-project-ng4.firebaseio.com/users.json');
     }
 
-    saveUser() {
-        this.http.post('https://test-project-ng4.firebaseio.com/users.json', this.users);
-        console.log('User added to database!');
+    saveUser(user) {
+        console.log('USER:', user);
+        return this.http.post('https://test-project-ng4.firebaseio.com/users.json', user);
     }
 }
